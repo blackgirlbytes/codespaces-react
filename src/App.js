@@ -1,5 +1,6 @@
 import './App.css';
 
+import {getAvatar } from './getRepos';
 function App() {
   return (
     <div className="App">
@@ -11,6 +12,8 @@ function App() {
         <p className="small">
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <button onClick={() => getAvatar()} > Button</button>
+  
         <p>
           <a
             className="App-link"
