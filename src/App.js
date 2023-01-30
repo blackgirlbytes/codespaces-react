@@ -1,6 +1,6 @@
 import './App.css';
 
-import {getAvatar } from './getRepos';
+import {getRepoList } from './getRepos';
 function App() {
   return (
     <div className="App">
@@ -12,7 +12,7 @@ function App() {
         <p className="small">
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <button onClick={() => getAvatar()} > Button</button>
+        <button onClick={() => getRepoList()} > Button</button>
   
         <p>
           <a

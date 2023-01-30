@@ -1,18 +1,18 @@
 const token = process.env.REACT_APP_GITHUB_TOKEN;
 
-
-// get github avatar
-const getAvatar = async () => {
-    const response = await fetch(`https://api.github.com/users/blackgirlbytes`, {
+async function getRepoList() {
+    // get list of repos from github
+    const response = await fetch('https://api.github.com/users/blackgirlbytes/repos', {
         headers: {
             Authorization: `token ${token}`,
+            'Access-Control-Allow-Origin': '*',
         },
     });
-    console.log(response, 'giuij');
-    return response.avatar_url;
-};
+    console.log(response.json)
+
+}
 
 module.exports = {
 
-    getAvatar,
+    getRepoList,
 }
