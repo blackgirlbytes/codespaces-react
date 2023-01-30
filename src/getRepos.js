@@ -9,10 +9,9 @@ async function getRepoList() {
         },
     });
     console.log(response.json)
-
+    return response.json();
 }
 
 module.exports = {
-
     getRepoList,
 }
